@@ -2,8 +2,17 @@ var express = require('express')
 var app = express()
 var exphbs = require('express-handlebars');
 
+helpers = {
+  isActive: function(a,b)
+  {
+    if(a==b)
+     return "active";
+    return "";
+  }
+}
 
-app.engine('handlebars',exphbs({defaultLayout: 'main'})); app.set('view engine', 'handlebars');
+
+app.engine('handlebars',exphbs({defaultLayout: 'main',helpers: helpers})); app.set('view engine', 'handlebars');
 
 app.use(express.static('public'))
 
@@ -15,5 +24,10 @@ app.listen(3000, function () {
 
 app.get('/', function(req, res)
 {
-  res.render('hello');   // this is the important part
+  res.render('home',{selected: "home"});
+});
+
+app.get('/contracts', function(req, res)
+{
+  res.render('contracts',{selected: "contracts"});
 });
