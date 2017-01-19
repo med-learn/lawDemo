@@ -11,6 +11,24 @@ helpers = {
   }
 }
 
+var contracts =   [
+    "Waiver Of Liability",
+    "Rent To Own Contract",
+    "Car Selling Contract",
+    "House Rental Contract",
+    "Payment Agreement Contract",
+    "Personal Loan Contract",
+    "Simple Contract",
+    "Construction Contract",
+    "Contract For Services Rendered",
+    "Hair Salon Booth Rental Agreement",
+    "General Contracting",
+    "Land Sale Contract",
+    "Investment Contract",
+    "Employment Contract",
+    "Car Rental Agreement"
+  ];
+
 
 app.engine('handlebars',exphbs({defaultLayout: 'main',helpers: helpers})); app.set('view engine', 'handlebars');
 
@@ -18,8 +36,8 @@ app.use(express.static('public'))
 
 
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(process.env.PORT || 3000, function () {
+  console.log('yoyoyoy')
 })
 
 app.get('/', function(req, res)
@@ -29,5 +47,19 @@ app.get('/', function(req, res)
 
 app.get('/contracts', function(req, res)
 {
-  res.render('contracts',{selected: "contracts"});
+  res.render('contracts',
+  {
+    selected: "contracts"
+
+  });
 });
+
+app.get('/temp', function(req, res)
+{
+  res.send({templates: contracts});
+});
+
+app.get('/edit/:docId', function (req, res) {
+  console.log(req.params);
+  res.render('editor',{selected: "editor"});
+})
