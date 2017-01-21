@@ -12,6 +12,7 @@ var templates;
 
 function startListen(tmpl){
    templates = tmpl;
+   updateDisplay($("#search-input").val());
 }
 
 

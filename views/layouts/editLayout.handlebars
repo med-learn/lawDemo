@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/style/main.css">
+
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+  <script src="/js/handlebars.js"></script>
+    <script src="/js/editorManager.js" > </script>
+      <script src="/js/editorLogic.js" > </script>
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+  <title>Edit: {{docId}}</title>
+</head>
+
+<body>
+
+
+
+
+
+{{{body}}}
+
+<script>
+
+$( window ).load(function() {
+  $('iframe').ready(function() {
+        var $head = $("iframe").contents().find("head");
+        $head.append($("<link/>",{ rel: "stylesheet", href: "/style/editor.css", type: "text/css" } ));
+  });
+});
+</script>
+
+</body>
+</html>

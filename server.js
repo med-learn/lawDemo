@@ -1,15 +1,7 @@
 var express = require('express')
 var app = express()
 var exphbs = require('express-handlebars');
-
-helpers = {
-  isActive: function(a,b)
-  {
-    if(a==b)
-     return "active";
-    return "";
-  }
-}
+var helpers = require('./helpers/helpers.js');
 
 var contracts =   [
     "Waiver Of Liability",
@@ -30,7 +22,16 @@ var contracts =   [
   ];
 
 
-app.engine('handlebars',exphbs({defaultLayout: 'main',helpers: helpers})); app.set('view engine', 'handlebars');
+app.engine('handlebars',
+exphbs(
+    {
+          defaultLayout: 'main',
+          helpers: helpers,
+          partialsDir: __dirname + '/views/partials/'
+
+    }));
+
+app.set('view engine', 'handlebars');
 
 app.use(express.static('public'))
 
@@ -61,5 +62,10 @@ app.get('/temp', function(req, res)
 
 app.get('/edit/:docId', function (req, res) {
   console.log(req.params);
-  res.render('editor',{selected: "editor"});
-})
+  res.render('editor',{noNav: "editor",layout: 'editLayout',docId:req.params.docId});
+});
+
+
+app.get("/t",function(req,res){
+    res.render('test',{selected: "test",layout: 'editLayout'});
+});
