@@ -1,3 +1,27 @@
-<div class="fill-div">
-{{> (test)}}
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <a href="#">About</a>
+ <a href="#">Services</a>
+ <a href="#">Clients</a>
+ <a href="#">Contact</a>
 </div>
+<div id="mainContainer">
+<div id="tinyEditor" class="fill-div">
+{{> (getFileName docId)}}
+</div>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mainContainer").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mainContainer").style.marginLeft= "0";
+}
+$(document).ready(function(){
+  console.log("BB");
+  $("html").keypress(function(event){openNav();console.log("aa");});
+});
+</script>

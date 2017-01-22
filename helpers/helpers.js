@@ -9,8 +9,23 @@ var helpers = {
   test: function()
   {
     return "file2";
-  }
+  },
 
+  getFileName: function(fileName)
+  {
+    console.log(fileName);
+    switch(fileName){
+      case "Waiver Of Liability":
+        return "file1";
+
+      case "Car Selling Contract":
+        return "file3";
+
+      default:
+        console.log("default");
+        return "file2";
+    }
+  }
 
 
 };
