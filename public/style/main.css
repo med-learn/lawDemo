@@ -65,10 +65,12 @@ h6 {
 
 #contract-search-res
 {
-  background: brown;
+  background: #527971;
   height: 100%;
   margin-top: -12%;
   text-align: center;
+  border: black;
+border-style: solid;
 }
 
 .contract-header{

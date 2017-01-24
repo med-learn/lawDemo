@@ -1,3 +1,21 @@
+#edit-body
+{
+      background: #c0d6c8;
+      overflow: hidden;
+}
+
+
+#mainContainer
+{
+    height: 93.2%;
+    width: 80%;
+    margin-left: 10%;
+    margin-top:5%;
+    border: #8aaf97;
+    border-width: 2px;
+    border-style: solid;
+}
+
 
 .sidenav {
     height: 100%;

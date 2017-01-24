@@ -1,6 +1,7 @@
 var config = {};
 
 config = $.extend(config, {
+    menubar:false,
     statusbar: false,
     resize: false,
     width: "100%",
@@ -12,6 +13,8 @@ config = $.extend(config, {
 function resize() {
     setTimeout(function () {
         // Main container
+        $("#mainContainer").css("margin-top",($("#navBar").outerHeight()-2)+"px");
+
         var max = $('.mce-tinymce')
               .css('border', 'none')
               .parent().outerHeight();
@@ -24,6 +27,7 @@ function resize() {
 
         // Random fix lawl - why 1px? no one knows
         max -= 1;
+
 
         // Set the new height
         $('.mce-edit-area').height(max);
