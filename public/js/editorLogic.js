@@ -44,5 +44,9 @@ $( window ).load(function() {
   //$frame.find(".mark1").click(function(){alert("CLK !");});
   //  bindChange($frame,"mark1");
 initMacros();
+  var $frame = $( "iframe" ).contents();
+ $frame.find('#cTest').append("<div class='row'><div class='col-sm-6'> <div class='form-group'> <div class='input-group date' id='datetimepicker1'> <input type='text' class='form-control' /> <span class='input-group-addon'><span class='glyphicon glyphicon-calendar'></span> </span></div> </div></div></div>");
+ $frame.find('#datetimepicker1').datetimepicker();
+
 
 });

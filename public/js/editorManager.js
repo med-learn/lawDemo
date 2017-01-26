@@ -38,7 +38,8 @@ $(window).on('resize', function () {
 });
 
 // Setup plugins
-config.toolbar = ["undo redo | styleselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent "];
+config.plugins = ["save"];
+config.toolbar = ["save |undo redo | styleselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent "];
 
 
 // Choose selector

@@ -19,11 +19,11 @@ var helpers = {
         return "file1";
 
       case "Car Selling Contract":
-        return "file3";
+        return "file2";
 
       default:
         console.log("default");
-        return "file2";
+        return "file3";
     }
   }
 

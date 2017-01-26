@@ -36,7 +36,7 @@ function getFilterdData(templates,searchString){
      return [];
     templates = templates.filter(function (elem) {return elem.toLowerCase().includes(searchString.toLowerCase());});
     var curGroup,id=1;
-    var groups = [], maxInRow = 4;
+    var groups = [], maxInRow = 5;
     while (templates.length > 0){
       curGroup = templates.splice(0, maxInRow);
       groups.push(curGroup.map(function(e) { return {name:e,link:"edit/"+e}} ));
@@ -47,13 +47,22 @@ function getFilterdData(templates,searchString){
 }
 
 
+function activateSearch(){
+  var firstKey=true;
+  $("#search-input").keyup(
+    function()
+    {
+      if(firstKey)
+        $(".search-container").addClass("clicked");
+      firstKey=false;
+      updateDisplay($("#search-input").val());
+    });
+}
+
 $( document ).ready(function() {
 initTemplates();
-$("#search-input").keyup(
-  function()
-  {
-    updateDisplay($("#search-input").val());
-  });
+
+activateSearch();
 
 
 

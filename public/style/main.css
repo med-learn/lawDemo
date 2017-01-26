@@ -2,6 +2,7 @@
 {
   padding-top: 8px;
   padding-bottom: 8px;
+
 }
 
 
@@ -12,6 +13,7 @@
 
 .temp-img
 {
+    width:72%;
     margin-top: 34px;
 }
 
@@ -65,6 +67,7 @@ h6 {
 
 #contract-search-res
 {
+  padding-left: 10%;
   background: #527971;
   height: 100%;
   margin-top: -12%;
@@ -93,6 +96,10 @@ border-style: solid;
     position: relative;
     padding-top: 13%;
     padding-bottom: 20%;
+    transition: padding-top 0.5s ease;
+}
+.search-container.clicked {
+    padding-top: 5%;
 }
 
 .intro-message {

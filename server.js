@@ -6,7 +6,7 @@ var helpers = require('./helpers/helpers.js');
 var contracts =   [
     "Waiver Of Liability",
     "Rent To Own Contract",
-    "Car Selling Contract",
+    "כתב ויתור טענות",
     "House Rental Contract",
     "Payment Agreement Contract",
     "Personal Loan Contract",
