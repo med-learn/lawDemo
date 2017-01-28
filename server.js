@@ -3,6 +3,8 @@ var app = express()
 var exphbs = require('express-handlebars');
 var helpers = require('./helpers/helpers.js');
 
+const PORT = 3000;
+
 var contracts =   [
     "Waiver Of Liability",
     "Rent To Own Contract",
@@ -37,8 +39,9 @@ app.use(express.static('public'))
 
 
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log('yoyoyoy')
+
+app.listen(process.env.PORT || PORT, function () {
+  console.log('App started at: http://localhost:'+PORT+'/')
 })
 
 app.get('/', function(req, res)
