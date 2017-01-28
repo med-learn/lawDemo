@@ -34,12 +34,12 @@ function updateDisplay(searchString) {
 function getFilterdData(templates, searchString) {
   //if (searchString.length < 2)
   //  return [];
-  templates = templates.filter(function (elem) { return elem.toLowerCase().includes(searchString.toLowerCase()); });
+  templates = templates.filter(function (elem) { return elem.cname.toLowerCase().includes(searchString.toLowerCase()); });
   var curGroup, id = 1;
   var groups = [], maxInRow = 6;
   while (templates.length > 0) {
     curGroup = templates.splice(0, maxInRow);
-    groups.push(curGroup.map(function (e) { return { name: e, link: "edit/" + e } }));
+    groups.push(curGroup.map(function (e) { return { name: e.cname, labels: e.labels, link: "edit/" + e.cname } }));
   }
 
 

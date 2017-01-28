@@ -2,27 +2,9 @@ var express = require('express')
 var app = express()
 var exphbs = require('express-handlebars');
 var helpers = require('./helpers/helpers.js');
+var contractsData = require('./helpers/ContractsData.js');
 
 const PORT = 3000;
-
-var contracts =   [
-    "Waiver Of Liability",
-    "Rent To Own Contract",
-    "כתב ויתור טענות",
-    "House Rental Contract",
-    "Payment Agreement Contract",
-    "Personal Loan Contract",
-    "Simple Contract",
-    "Construction Contract",
-    "Contract For Services Rendered",
-    "Hair Salon Booth Rental Agreement",
-    "General Contracting",
-    "Land Sale Contract",
-    "Investment Contract",
-    "Employment Contract",
-    "Car Rental Agreement"
-  ];
-
 
 app.engine('handlebars',
 exphbs(
@@ -43,9 +25,9 @@ app.listen(process.env.PORT || PORT, function () {
 
 app.get('/', function(req, res) { res.render('home',{selected: "home"}); });
 
-app.get('/contracts', function(req, res) { res.render('contracts', {selected: "contracts"}); });
+app.get('/contracts', function(req, res) { res.render('contracts', {selected: "contractsData.getData()"}); });
 
-app.get('/temp', function(req, res) { res.send({templates: contracts}); });
+app.get('/temp', function(req, res) { res.send({templates: contractsData.getData()}); });
 
 app.get('/edit/:docId', function (req, res) {
   console.log(req.params);
