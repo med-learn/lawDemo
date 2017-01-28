@@ -37,31 +37,15 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'))
 
-
-
-
 app.listen(process.env.PORT || PORT, function () {
   console.log('App started at: http://localhost:'+PORT+'/')
 })
 
-app.get('/', function(req, res)
-{
-  res.render('home',{selected: "home"});
-});
+app.get('/', function(req, res) { res.render('home',{selected: "home"}); });
 
-app.get('/contracts', function(req, res)
-{
-  res.render('contracts',
-  {
-    selected: "contracts"
+app.get('/contracts', function(req, res) { res.render('contracts', {selected: "contracts"}); });
 
-  });
-});
-
-app.get('/temp', function(req, res)
-{
-  res.send({templates: contracts});
-});
+app.get('/temp', function(req, res) { res.send({templates: contracts}); });
 
 app.get('/edit/:docId', function (req, res) {
   console.log(req.params);
