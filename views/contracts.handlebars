@@ -17,6 +17,15 @@
 
         <span class="temp-name">\{{{name}}}</span>
       </a>
+      <ul class="temp-labels">
+        \{{#each labels}}
+        <li class="temp-label">
+          <a href="#">
+          \{{this}}
+          </a>
+        </li>
+        \{{/each}}
+      </ul>
     </div>
     \{{/each}}
 
