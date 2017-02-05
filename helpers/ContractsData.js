@@ -1,45 +1,44 @@
 var ContractsData = {
-    getData: function () {
-        var contracts = [
-            {
+    getData: function() {
+        var contracts = [{
                 cname: "Waiver Of Liability",
-                labels: ["Eng", "Private"]
+                labels: ["עברית", "Private"]
             },
             {
                 cname: "Rent To Own Contract",
-                labels: ["Eng", "Public"]
+                labels: ["אנגלית", "Public"]
             },
             {
                 cname: "כתב ויתור טענות",
-                labels: ["Heb", "Shared"]
+                labels: ["עברית", "Shared"]
             },
             {
                 cname: "House Rental Contract",
-                labels: [""]
+                labels: ["עברית", "Private"]
             },
             {
                 cname: "Payment Agreement Contract",
-                labels: [""]
+                labels: ["אנגלית", "Private"]
             },
             {
                 cname: "Personal Loan Contract",
-                labels: [""]
+                labels: ["עברית", "Public"]
             },
             {
                 cname: "Simple Contract",
-                labels: [""]
+                labels: ["אנגלית", "Public"]
             },
             {
                 cname: "Construction Contract",
-                labels: [""]
+                labels: ["אנגלית"]
             },
             {
                 cname: "Contract For Services Rendered",
-                labels: [""]
+                labels: ["Public"]
             },
             {
                 cname: "Hair Salon Booth Rental Agreement",
-                labels: [""]
+                labels: ["אנגלית"]
             },
             {
                 cname: "General Contracting",

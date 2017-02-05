@@ -12,6 +12,12 @@
     margin-top: 34px;
 }
 
+input {
+    unicode-bidi: bidi-override;
+    direction: RTL;
+    margin-top: 10px;
+}
+
 .temp-img:hover {
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.1);

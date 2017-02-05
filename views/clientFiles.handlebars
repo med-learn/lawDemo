@@ -7,26 +7,17 @@
 {{/inline}}
 -->
 
-<script id="contract-template" type="text/x-handlebars-template">
+<script id="client-template" type="text/x-handlebars-template">
 
   <div class="row">
-    \{{#each contracts}}
+    \{{#each clients}}
     <div class="col-lg-2">
-      <a href="\{{link}}" class="doc-group">
-        <img class="temp-img" src="images/contract-iconV2.png" />
+      <a href="\{{clientName}}" class="doc-group">
+        <img class="temp-img" src="images/folder.png" width="140px" />
 
         <span class="temp-name">\{{{name}}}</span>
       </a>
-      <ul class="temp-labels">
-        \{{#each labels}}
-        <li class="label temp-label" onclick="lblClicked(this)" >
-          <a href="#">
-          \{{lbl}}  <span class="\{{icon}}"></span>
-          </a>
 
-        </li>
-        \{{/each}}
-      </ul>
     </div>
     \{{/each}}
 
@@ -41,12 +32,15 @@
         <div class="search-container">
           <h2>חפש תבניות ליצירת חוזים משפטיים</h2>
           <h4>הכנס מילות חיפוש</h4>
-          <div class="col-md-4"></div>
           <div class="col-md-4">
-            <input id="search-input" class="form-control" placeholder="טקסט חופשי" />
-            <input id="search-lbls-input" class="form-control" placeholder="טקסט חופשי" />
+
           </div>
-          <div class="col-md-4"> </div>
+          <div class="col-md-4">
+            <input id="search-input" class="form-control" />
+          </div>
+          <div class="col-md-4">
+
+          </div>
 
         </div>
       </div>
