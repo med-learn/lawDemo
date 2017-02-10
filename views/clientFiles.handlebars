@@ -1,0 +1,56 @@
+<!--
+{{#*inline "contract"}}
+  <div class="col-lg-3">
+    <img src="images/contract-icon.png" />
+    <div>{{name}}</div>
+  </div>
+{{/inline}}
+-->
+
+<script id="client-template" type="text/x-handlebars-template">
+
+  <div class="row">
+    \{{#each clients}}
+    <div class="col-lg-2">
+      <a href="\{{clientName}}" class="doc-group">
+        <img class="temp-img" src="images/folder.png" width="140px" />
+
+        <span class="temp-name">\{{{name}}}</span>
+      </a>
+
+    </div>
+    \{{/each}}
+
+  </div>
+</script>
+
+<div class="contract-header">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="search-container">
+          <h2>חפש תבניות ליצירת חוזים משפטיים</h2>
+          <h4>הכנס מילות חיפוש</h4>
+          <div class="col-md-4">
+
+          </div>
+          <div class="col-md-4">
+            <input id="search-input" class="form-control" />
+          </div>
+          <div class="col-md-4">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div>
+
+<div class="container-fluid" id="contract-search-res">
+
+</div>

@@ -1,27 +1,28 @@
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
- <a href="#">About</a>
- <a href="#">Services</a>
- <a href="#">Clients</a>
- <a href="#">Contact</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Options 1</a>
+    <a href="#">Options 2</a>
+    <a href="#">Options 3</a>
+    <a href="#">More options</a>
 </div>
+
 <div id="mainContainer">
-<div id="tinyEditor" class="fill-div">
-{{> (getFileName docId)}}
-</div>
+    <div id="tinyEditor" class="fill-div">
+        {{> (getFileName docId)}}
+    </div>
 </div>
 <script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("mainContainer").style.marginLeft = "250px";
-}
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "15%";
+        document.getElementById("mainContainer").style.marginLeft = "15%";
+    }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("mainContainer").style.marginLeft= "0";
-}
-$(document).ready(function(){
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("mainContainer").style.marginLeft = "15%";
+    }
 
-  $("html").keypress(function(event){openNav();console.log("aa");});
-});
+    $(document).ready(function () {
+        $("html").keypress(function (event) { openNav(); console.log("aa"); });
+    });
 </script>
